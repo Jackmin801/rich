@@ -432,6 +432,7 @@ class Traceback:
                         continue
                     if locals_hide_sunder and key.startswith("_"):
                         continue
+                    # This is where we can add other filters
                     yield key, value
 
             for frame_summary, line_no in walk_tb(traceback):
